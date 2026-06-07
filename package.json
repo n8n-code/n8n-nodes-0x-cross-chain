@@ -1,6 +1,6 @@
 {
   "name": "@n8n-dev/n8n-nodes-0x-cross-chain",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "0x Cross-Chain API for bridging assets across EVM Solana Tron and HyperCore networks with real-time quotes and status tracking",
   "license": "MIT",
   "homepage": "https://n8n-code.github.io/n8n-dev/#/n8n-nodes-0x-cross-chain",

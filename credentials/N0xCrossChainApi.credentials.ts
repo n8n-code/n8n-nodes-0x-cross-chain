@@ -55,7 +55,7 @@ export class N0xCrossChainApi implements ICredentialType {
 
 	test: ICredentialTestRequest = {
 			"request": {
-				"baseURL": "={{ $credentials.baseUrl }}",
+				"baseURL": "={{ $credentials.url }}",
 				"url": "/cross-chain/status",
 				"method": "GET"
 			}
