@@ -5,7 +5,7 @@ export class N0xCrossChain implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: '0x-cross-chain',
 		name: 'N8nDevN0xCrossChain',
-		icon: { light: 'file:./0x-cross-chain.svg', dark: 'file:./0x-cross-chain.dark.svg' },
+		icon: { light: 'file:./0x-cross-chain.png', dark: 'file:./0x-cross-chain.dark.png' },
 		group: ['input'],
 		version: 1,
 		subtitle: '={{\$parameter["operation"] + ": " + \$parameter["resource"]}}',

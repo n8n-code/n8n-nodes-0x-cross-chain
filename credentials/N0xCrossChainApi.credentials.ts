@@ -10,7 +10,7 @@ export class N0xCrossChainApi implements ICredentialType {
 
 	displayName = '0x-cross-chain API';
 
-	icon: Icon = { light: 'file:../nodes/N0xCrossChain/0x-cross-chain.svg', dark: 'file:../nodes/N0xCrossChain/0x-cross-chain.dark.svg' };
+	icon: Icon = { light: 'file:../nodes/N0xCrossChain/0x-cross-chain.png', dark: 'file:../nodes/N0xCrossChain/0x-cross-chain.dark.png' };
 
 	documentationUrl = '';
 
