@@ -1,5 +1,7 @@
 # @n8n-dev/n8n-nodes-0x-cross-chain
 
+![0x-cross-chain Banner](banner.svg)
+
 [![npm version](https://img.shields.io/npm/v/@n8n-dev/n8n-nodes-0x-cross-chain.svg)](https://www.npmjs.com/package/@n8n-dev/n8n-nodes-0x-cross-chain)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
