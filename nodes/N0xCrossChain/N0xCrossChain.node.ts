@@ -3,14 +3,14 @@ import { crossChainDescription } from './resources/cross-chain';
 
 export class N0xCrossChain implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: '0x-cross-chain',
+		displayName: '0x Cross Chain',
 		name: 'N8nDevN0xCrossChain',
 		icon: { light: 'file:./0x-cross-chain.png', dark: 'file:./0x-cross-chain.dark.png' },
 		group: ['input'],
 		version: 1,
 		subtitle: '={{\$parameter["operation"] + ": " + \$parameter["resource"]}}',
-		description: '0x Cross-Chain API for bridging assets across EVM Solana Tron and HyperCore networks with real-time quotes and status tracking',
-		defaults: { name: '0x-cross-chain' },
+		description: 'Cross-chain API bridging assets across EVM, Solana, Tron, HyperCore with real-time quotes and status tracking.',
+		defaults: { name: '0x Cross Chain' },
 		usableAsTool: true,
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],

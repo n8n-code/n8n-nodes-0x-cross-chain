@@ -53,9 +53,16 @@ That's it. No configuration files. No code. It just works.
 
 ## Resources
 
-| Resource | Operations |
-|----------|------------|
-| Cross Chain | GET getQuotes, GET getStatus, GET listSources, GET getTxHistory, GET streamQuotes |
+<details>
+<summary><b>Cross Chain</b> (5 operations)</summary>
+
+- Get Quotes
+- Get Status
+- Get listSources
+- Get TxHistory
+- Get streamQuotes
+
+</details>
 
 ---
 

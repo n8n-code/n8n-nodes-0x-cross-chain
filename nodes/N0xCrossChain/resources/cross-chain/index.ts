@@ -97,7 +97,7 @@ export const crossChainDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "0 X Api Key",
+			"displayName": "0 X API Key",
 			"name": "0x-api-key",
 			"required": true,
 			"description": "Visit dashboard.0x.org to get your API Key",
@@ -583,7 +583,7 @@ export const crossChainDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "0 X Api Key",
+			"displayName": "0 X API Key",
 			"name": "0x-api-key",
 			"required": true,
 			"description": "Visit dashboard.0x.org to get your API Key",
@@ -660,7 +660,7 @@ export const crossChainDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "Quote Id",
+			"displayName": "Quote ID",
 			"name": "quoteId",
 			"description": "The quote ID associated with the cross-chain transaction",
 			"default": "",
@@ -704,7 +704,7 @@ export const crossChainDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "0 X Api Key",
+			"displayName": "0 X API Key",
 			"name": "0x-api-key",
 			"required": true,
 			"description": "Visit dashboard.0x.org to get your API Key",
@@ -748,7 +748,7 @@ export const crossChainDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "0 X Api Key",
+			"displayName": "0 X API Key",
 			"name": "0x-api-key",
 			"required": true,
 			"description": "Visit dashboard.0x.org to get your API Key",
@@ -867,7 +867,7 @@ export const crossChainDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "0 X Api Key",
+			"displayName": "0 X API Key",
 			"name": "0x-api-key",
 			"required": true,
 			"description": "Visit dashboard.0x.org to get your API Key",
