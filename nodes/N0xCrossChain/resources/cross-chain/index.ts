@@ -1,7 +1,7 @@
 import type { INodeProperties } from 'n8n-workflow';
 
 export const crossChainDescription: INodeProperties[] = [
-		{
+                {
 			"displayName": "Operation",
 			"name": "operation",
 			"type": "options",
@@ -312,6 +312,31 @@ export const crossChainDescription: INodeProperties[] = [
 				"send": {
 					"type": "query",
 					"property": "gasPayer",
+					"value": "={{ $value }}",
+					"propertyInDotNotation": false
+				}
+			},
+			"displayOptions": {
+				"show": {
+					"resource": [
+						"Cross Chain"
+					],
+					"operation": [
+						"Cross Chain Get Quotes"
+					]
+				}
+			}
+		},
+		{
+			"displayName": "Solana Ephemeral Signer Pubkey",
+			"name": "solanaEphemeralSignerPubkey",
+			"description": "Pubkey of an integrator-held ephemeral keypair used as a one-shot extra transaction signer for Solana origin routes that require one (e.g. the CCTP event account). Generate a fresh keypair per request and sign the returned transaction with it; the account must not already exist on-chain and is not reusable afterwards. Routes requiring an ephemeral signer are only quoted when this is set. Only applicable for Solana origin chains",
+			"default": "",
+			"type": "string",
+			"routing": {
+				"send": {
+					"type": "query",
+					"property": "solanaEphemeralSignerPubkey",
 					"value": "={{ $value }}",
 					"propertyInDotNotation": false
 				}
@@ -1082,6 +1107,31 @@ export const crossChainDescription: INodeProperties[] = [
 				"send": {
 					"type": "query",
 					"property": "gasPayer",
+					"value": "={{ $value }}",
+					"propertyInDotNotation": false
+				}
+			},
+			"displayOptions": {
+				"show": {
+					"resource": [
+						"Cross Chain"
+					],
+					"operation": [
+						"Cross Chain Stream Quotes"
+					]
+				}
+			}
+		},
+		{
+			"displayName": "Solana Ephemeral Signer Pubkey",
+			"name": "solanaEphemeralSignerPubkey",
+			"description": "Pubkey of an integrator-held ephemeral keypair used as a one-shot extra transaction signer for Solana origin routes that require one (e.g. the CCTP event account). Generate a fresh keypair per request and sign the returned transaction with it; the account must not already exist on-chain and is not reusable afterwards. Routes requiring an ephemeral signer are only quoted when this is set. Only applicable for Solana origin chains",
+			"default": "",
+			"type": "string",
+			"routing": {
+				"send": {
+					"type": "query",
+					"property": "solanaEphemeralSignerPubkey",
 					"value": "={{ $value }}",
 					"propertyInDotNotation": false
 				}
