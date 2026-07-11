@@ -54,12 +54,11 @@ That's it. No configuration files. No code. It just works.
 ## Resources
 
 <details>
-<summary><b>Cross Chain</b> (5 operations)</summary>
+<summary><b>Cross Chain</b> (4 operations)</summary>
 
 - Get Quotes
 - Get Status
 - Get listSources
-- Get TxHistory
 - Get streamQuotes
 
 </details>
