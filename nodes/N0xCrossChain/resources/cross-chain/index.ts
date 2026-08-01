@@ -493,7 +493,7 @@ export const crossChainDescription: INodeProperties[] = [
 		{
 			"displayName": "Fee Token",
 			"name": "feeToken",
-			"description": "The token addresses for fee collection on the origin chain (supports single or comma-separated values). Must be the same as sellToken. When multiple values are provided, must match the length of feeBps. If omitted, defaults to sellToken. Note: integrator fee collection is not yet supported for Tron-originated routes.",
+			"description": "The token addresses for fee collection on the origin chain (supports single or comma-separated values). Must be the same as sellToken. When multiple values are provided, must match the length of feeBps. If omitted, defaults to sellToken. Some routes collect the integrator fee through the bridge provider instead of on-chain; the fee still goes to feeRecipient, but it comes out of the token entering the bridge, which is not sellToken when the route swaps before bridging. Read fees.integratorFee.token for the token actually charged. Note: integrator fee collection is not yet supported for Tron-originated routes.",
 			"default": "",
 			"type": "string",
 			"routing": {
@@ -1169,7 +1169,7 @@ export const crossChainDescription: INodeProperties[] = [
 		{
 			"displayName": "Fee Token",
 			"name": "feeToken",
-			"description": "The token addresses for fee collection on the origin chain (supports single or comma-separated values). Must be the same as sellToken. When multiple values are provided, must match the length of feeBps. If omitted, defaults to sellToken. Note: integrator fee collection is not yet supported for Tron-originated routes.",
+			"description": "The token addresses for fee collection on the origin chain (supports single or comma-separated values). Must be the same as sellToken. When multiple values are provided, must match the length of feeBps. If omitted, defaults to sellToken. Some routes collect the integrator fee through the bridge provider instead of on-chain; the fee still goes to feeRecipient, but it comes out of the token entering the bridge, which is not sellToken when the route swaps before bridging. Read fees.integratorFee.token for the token actually charged. Note: integrator fee collection is not yet supported for Tron-originated routes.",
 			"default": "",
 			"type": "string",
 			"routing": {
