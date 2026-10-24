@@ -165,7 +165,7 @@ export const crossChainDescription: INodeProperties[] = [
 			"displayName": "Sell Token",
 			"name": "sellToken",
 			"required": true,
-			"description": "The contract address of the token to sell on the origin chain. Format varies by chain type (EVM address for EVM/HyperCore chains, token mint address for Solana, base58check address for Tron)",
+			"description": "The contract address of the token to sell on the origin chain. Format varies by chain type (EVM address for EVM/HyperCore chains, token mint address for Solana, base58check address for Tron). For Bitcoin, the only accepted value is bc1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqmql8k8.",
 			"default": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
 			"type": "string",
 			"routing": {
@@ -191,7 +191,7 @@ export const crossChainDescription: INodeProperties[] = [
 			"displayName": "Buy Token",
 			"name": "buyToken",
 			"required": true,
-			"description": "The contract address of the token to buy on the destination chain. Format varies by chain type (EVM address for EVM/HyperCore chains, token mint address for Solana, base58check address for Tron)",
+			"description": "The contract address of the token to buy on the destination chain. Format varies by chain type (EVM address for EVM/HyperCore chains, token mint address for Solana, base58check address for Tron). For Bitcoin, the only accepted value is bc1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqmql8k8.",
 			"default": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
 			"type": "string",
 			"routing": {
@@ -443,7 +443,7 @@ export const crossChainDescription: INodeProperties[] = [
 		{
 			"displayName": "Fee Bps",
 			"name": "feeBps",
-			"description": "The trading fee amounts in basis points to charge on the origin chain (supports single or comma-separated values). Mutually exclusive with `feePpm`. Must be used together with feeRecipient. When multiple values are provided, must match the length of feeRecipient. Note: integrator fee collection is not yet supported for Tron-originated routes.",
+			"description": "The trading fee amounts in basis points to charge on the origin chain (supports single or comma-separated values). Mutually exclusive with `feePpm`. Must be used together with feeRecipient. When multiple values are provided, must match the length of feeRecipient. Note: integrator fee collection is not yet supported for Tron-originated or Bitcoin-originated routes.",
 			"default": "",
 			"type": "string",
 			"routing": {
@@ -468,7 +468,7 @@ export const crossChainDescription: INodeProperties[] = [
 		{
 			"displayName": "Fee Ppm",
 			"name": "feePpm",
-			"description": "The trading fee amounts in parts-per-million (PPM) to charge on the origin chain (supports single or comma-separated values). Mutually exclusive with `feeBps`. Must be used together with feeRecipient. Each value must be an integer from 0 to 1000000. When multiple values are provided, must match the length of feeRecipient. e.g. 5000 PPM = 50 BPS = 0.5%. Note: integrator fee collection is not yet supported for Tron-originated routes.",
+			"description": "The trading fee amounts in parts-per-million (PPM) to charge on the origin chain (supports single or comma-separated values). Mutually exclusive with `feeBps`. Must be used together with feeRecipient. Each value must be an integer from 0 to 1000000. When multiple values are provided, must match the length of feeRecipient. e.g. 5000 PPM = 50 BPS = 0.5%. Note: integrator fee collection is not yet supported for Tron-originated or Bitcoin-originated routes.",
 			"default": "",
 			"type": "string",
 			"routing": {
@@ -493,7 +493,7 @@ export const crossChainDescription: INodeProperties[] = [
 		{
 			"displayName": "Fee Recipient",
 			"name": "feeRecipient",
-			"description": "The wallet addresses to receive trading fees on the origin chain (supports single or comma-separated values). Must be used together with feeBps or feePpm. When multiple values are provided, must match the length of feeBps or feePpm. Note: integrator fee collection is not yet supported for Tron-originated routes.",
+			"description": "The wallet addresses to receive trading fees on the origin chain (supports single or comma-separated values). Must be used together with feeBps or feePpm. When multiple values are provided, must match the length of feeBps or feePpm. Note: integrator fee collection is not yet supported for Tron-originated or Bitcoin-originated routes.",
 			"default": "",
 			"type": "string",
 			"routing": {
@@ -518,7 +518,7 @@ export const crossChainDescription: INodeProperties[] = [
 		{
 			"displayName": "Fee Token",
 			"name": "feeToken",
-			"description": "The token addresses for fee collection on the origin chain (supports single or comma-separated values). Must be the same as sellToken. When multiple values are provided, must match the length of feeBps or feePpm. If omitted, defaults to sellToken. Some routes collect the integrator fee through the bridge provider instead of on-chain; the fee still goes to feeRecipient, but it comes out of the token entering the bridge, which is not sellToken when the route swaps before bridging. Read fees.integratorFee.token for the token actually charged. Note: integrator fee collection is not yet supported for Tron-originated routes.",
+			"description": "The token addresses for fee collection on the origin chain (supports single or comma-separated values). Must be the same as sellToken. When multiple values are provided, must match the length of feeBps or feePpm. If omitted, defaults to sellToken. Some routes collect the integrator fee through the bridge provider instead of on-chain; the fee still goes to feeRecipient, but it comes out of the token entering the bridge, which is not sellToken when the route swaps before bridging. Read fees.integratorFee.token for the token actually charged. Note: integrator fee collection is not yet supported for Tron-originated or Bitcoin-originated routes.",
 			"default": "",
 			"type": "string",
 			"routing": {
@@ -675,7 +675,7 @@ export const crossChainDescription: INodeProperties[] = [
 			"displayName": "Origin Tx Hash",
 			"name": "originTxHash",
 			"required": true,
-			"description": "The transaction hash on the origin chain to track. Format varies by chain type (32-byte hex for EVM/HyperCore, base58 signature for Solana, 64-char hex for Tron)",
+			"description": "The transaction hash on the origin chain to track. Format varies by chain type (32-byte hex for EVM/HyperCore, base58 signature for Solana, 64-char hex for Tron and Bitcoin)",
 			"default": "0xe347e66b1d9793a11a962c1483f9eef03272c362c41dc1f21c87577ef5ec1a7c",
 			"type": "string",
 			"routing": {
@@ -866,7 +866,7 @@ export const crossChainDescription: INodeProperties[] = [
 			"displayName": "Sell Token",
 			"name": "sellToken",
 			"required": true,
-			"description": "The contract address of the token to sell on the origin chain. Format varies by chain type (EVM address for EVM/HyperCore chains, token mint address for Solana, base58check address for Tron)",
+			"description": "The contract address of the token to sell on the origin chain. Format varies by chain type (EVM address for EVM/HyperCore chains, token mint address for Solana, base58check address for Tron). For Bitcoin, the only accepted value is bc1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqmql8k8.",
 			"default": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
 			"type": "string",
 			"routing": {
@@ -892,7 +892,7 @@ export const crossChainDescription: INodeProperties[] = [
 			"displayName": "Buy Token",
 			"name": "buyToken",
 			"required": true,
-			"description": "The contract address of the token to buy on the destination chain. Format varies by chain type (EVM address for EVM/HyperCore chains, token mint address for Solana, base58check address for Tron)",
+			"description": "The contract address of the token to buy on the destination chain. Format varies by chain type (EVM address for EVM/HyperCore chains, token mint address for Solana, base58check address for Tron). For Bitcoin, the only accepted value is bc1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqmql8k8.",
 			"default": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
 			"type": "string",
 			"routing": {
@@ -1144,7 +1144,7 @@ export const crossChainDescription: INodeProperties[] = [
 		{
 			"displayName": "Fee Bps",
 			"name": "feeBps",
-			"description": "The trading fee amounts in basis points to charge on the origin chain (supports single or comma-separated values). Mutually exclusive with `feePpm`. Must be used together with feeRecipient. When multiple values are provided, must match the length of feeRecipient. Note: integrator fee collection is not yet supported for Tron-originated routes.",
+			"description": "The trading fee amounts in basis points to charge on the origin chain (supports single or comma-separated values). Mutually exclusive with `feePpm`. Must be used together with feeRecipient. When multiple values are provided, must match the length of feeRecipient. Note: integrator fee collection is not yet supported for Tron-originated or Bitcoin-originated routes.",
 			"default": "",
 			"type": "string",
 			"routing": {
@@ -1169,7 +1169,7 @@ export const crossChainDescription: INodeProperties[] = [
 		{
 			"displayName": "Fee Ppm",
 			"name": "feePpm",
-			"description": "The trading fee amounts in parts-per-million (PPM) to charge on the origin chain (supports single or comma-separated values). Mutually exclusive with `feeBps`. Must be used together with feeRecipient. Each value must be an integer from 0 to 1000000. When multiple values are provided, must match the length of feeRecipient. e.g. 5000 PPM = 50 BPS = 0.5%. Note: integrator fee collection is not yet supported for Tron-originated routes.",
+			"description": "The trading fee amounts in parts-per-million (PPM) to charge on the origin chain (supports single or comma-separated values). Mutually exclusive with `feeBps`. Must be used together with feeRecipient. Each value must be an integer from 0 to 1000000. When multiple values are provided, must match the length of feeRecipient. e.g. 5000 PPM = 50 BPS = 0.5%. Note: integrator fee collection is not yet supported for Tron-originated or Bitcoin-originated routes.",
 			"default": "",
 			"type": "string",
 			"routing": {
@@ -1194,7 +1194,7 @@ export const crossChainDescription: INodeProperties[] = [
 		{
 			"displayName": "Fee Recipient",
 			"name": "feeRecipient",
-			"description": "The wallet addresses to receive trading fees on the origin chain (supports single or comma-separated values). Must be used together with feeBps or feePpm. When multiple values are provided, must match the length of feeBps or feePpm. Note: integrator fee collection is not yet supported for Tron-originated routes.",
+			"description": "The wallet addresses to receive trading fees on the origin chain (supports single or comma-separated values). Must be used together with feeBps or feePpm. When multiple values are provided, must match the length of feeBps or feePpm. Note: integrator fee collection is not yet supported for Tron-originated or Bitcoin-originated routes.",
 			"default": "",
 			"type": "string",
 			"routing": {
@@ -1219,7 +1219,7 @@ export const crossChainDescription: INodeProperties[] = [
 		{
 			"displayName": "Fee Token",
 			"name": "feeToken",
-			"description": "The token addresses for fee collection on the origin chain (supports single or comma-separated values). Must be the same as sellToken. When multiple values are provided, must match the length of feeBps or feePpm. If omitted, defaults to sellToken. Some routes collect the integrator fee through the bridge provider instead of on-chain; the fee still goes to feeRecipient, but it comes out of the token entering the bridge, which is not sellToken when the route swaps before bridging. Read fees.integratorFee.token for the token actually charged. Note: integrator fee collection is not yet supported for Tron-originated routes.",
+			"description": "The token addresses for fee collection on the origin chain (supports single or comma-separated values). Must be the same as sellToken. When multiple values are provided, must match the length of feeBps or feePpm. If omitted, defaults to sellToken. Some routes collect the integrator fee through the bridge provider instead of on-chain; the fee still goes to feeRecipient, but it comes out of the token entering the bridge, which is not sellToken when the route swaps before bridging. Read fees.integratorFee.token for the token actually charged. Note: integrator fee collection is not yet supported for Tron-originated or Bitcoin-originated routes.",
 			"default": "",
 			"type": "string",
 			"routing": {
