@@ -2001,7 +2001,8 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "maxLength": 66
             },
             "description": "The quote ID associated with the cross-chain transaction"
           }
