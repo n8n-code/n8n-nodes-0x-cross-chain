@@ -243,7 +243,7 @@ export const crossChainDescription: INodeProperties[] = [
 			"displayName": "Origin Address",
 			"name": "originAddress",
 			"required": true,
-			"description": "The wallet address on the origin chain that holds the sellToken balance and will initiate the cross-chain transaction. For Bitcoin, quotes are supported from one native SegWit (P2WPKH, `bc1q`) address with confirmed coins. The quote returns a PSBT to sign with SIGHASH_ALL.",
+			"description": "The wallet address on the origin chain that holds the sellToken balance and will initiate the cross-chain transaction.",
 			"default": "0x56EB0aD2dC746540Fab5C02478B31e2AA9DdC38C",
 			"type": "string",
 			"routing": {
@@ -268,7 +268,7 @@ export const crossChainDescription: INodeProperties[] = [
 		{
 			"displayName": "Destination Address",
 			"name": "destinationAddress",
-			"description": "The wallet address on the destination chain that will receive the buyToken. If not specified, defaults to originAddress on the destination chain. A Bitcoin destination accepts any mainnet address type.",
+			"description": "The wallet address on the destination chain that will receive the buyToken. If not specified, defaults to originAddress on the destination chain.",
 			"default": "0x56EB0aD2dC746540Fab5C02478B31e2AA9DdC38C",
 			"type": "string",
 			"routing": {
@@ -944,7 +944,7 @@ export const crossChainDescription: INodeProperties[] = [
 			"displayName": "Origin Address",
 			"name": "originAddress",
 			"required": true,
-			"description": "The wallet address on the origin chain that holds the sellToken balance and will initiate the cross-chain transaction. For Bitcoin, quotes are supported from one native SegWit (P2WPKH, `bc1q`) address with confirmed coins. The quote returns a PSBT to sign with SIGHASH_ALL.",
+			"description": "The wallet address on the origin chain that holds the sellToken balance and will initiate the cross-chain transaction.",
 			"default": "0x56EB0aD2dC746540Fab5C02478B31e2AA9DdC38C",
 			"type": "string",
 			"routing": {
@@ -969,7 +969,7 @@ export const crossChainDescription: INodeProperties[] = [
 		{
 			"displayName": "Destination Address",
 			"name": "destinationAddress",
-			"description": "The wallet address on the destination chain that will receive the buyToken. If not specified, defaults to originAddress on the destination chain. A Bitcoin destination accepts any mainnet address type.",
+			"description": "The wallet address on the destination chain that will receive the buyToken. If not specified, defaults to originAddress on the destination chain.",
 			"default": "0x56EB0aD2dC746540Fab5C02478B31e2AA9DdC38C",
 			"type": "string",
 			"routing": {
